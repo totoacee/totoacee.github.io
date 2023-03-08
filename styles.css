@@ -46,7 +46,7 @@ main {
 }
 
 .btn {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,6 +67,11 @@ main {
   color: #fff;
 }
 
-#precios{
-  margin: 10px;
+#precios {
+  /* background-color: #94d2bd; */
+  color: #000;
+}
+
+#precios:hover{
+  color: #fff;
 }
