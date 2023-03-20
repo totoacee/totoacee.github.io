@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mapa</title>
+    <title>Pizza City - Mapa</title>
+    <link rel="icon" href="src/pizza.png" type="image/icon type" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -26,6 +27,10 @@
 
       form {
         margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
 
       label {
@@ -57,10 +62,15 @@
       }
 
       #map {
-        height: 500px;
-        margin: 20px 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 60%;
         border-radius: 5px;
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        margin-top: 30px;
       }
     </style>
     <script src="js/app.js"></script>
