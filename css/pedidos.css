@@ -1,0 +1,318 @@
+/* Apply a dark background color to the body */
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  }
+  
+  /* Center the heading */
+  h1 {
+    text-align: center;
+  }
+  
+  #container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #container-menu {
+    flex: 1 1 80%;
+  }
+  #container-order{
+    flex: 1 1 10%;
+    margin-left: 20px;
+  }
+  /* Style the pizza menu */
+  .menu {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* add this line */
+  }
+  
+  .menu li{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 5%;
+  }
+  
+  
+  .menu input[type="checkbox"] {
+    display: none;
+  }
+  
+  .menu label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .menu label:before {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .menu label:hover:before {
+    transform: scale(1.2);
+  }
+  
+  .menu input[type="checkbox"][value="muzza"] + label:before {
+    background-image: url("../src/muzza.jpg");
+  }
+  
+  .menu input[type="checkbox"][value="muzzahuevo"] + label:before {
+    background-image: url("../src/muzzahuev.png");
+  }
+  
+  .menu input[type="checkbox"][value="muzzaanchoa"] + label:before {
+    background-image: url("../src/muzzanchoas.png");
+  }
+  
+  .menu input[type="checkbox"][value="muzzamorrones"] + label:before {
+    background-image: url("../src/muzzamorrones.png");
+  }
+  
+  .menu input[type="checkbox"][value="mixta"] + label:before {
+    background-image: url("../src/mixta.png");
+  }
+  
+  .menu input[type="checkbox"][value="anchoas"] + label:before {
+    background-image: url("../src/anchoas.png");
+  }
+  
+  .menu input[type="checkbox"][value="jamon"] + label:before {
+    background-image: url("../src/jamon.png");
+  }
+  
+  .menu input[type="checkbox"][value="jamonmorrones"] + label:before {
+    background-image: url("../src/jamonmorrones.png");
+  }
+  
+  .menu input[type="checkbox"][value="jamonpalmitos"] + label:before {
+    background-image: url("../src/jamonpalmitos.png");
+  }
+  
+  .menu input[type="checkbox"][value="jamonanana"] + label:before {
+    background-image: url("../src/jamonanana.png");
+  }
+  
+  .menu input[type="checkbox"][value="jamonhuevo"] + label:before {
+    background-image: url("../src/jamonhuevo.png");
+  }
+  
+  .menu input[type="checkbox"][value="napo"] + label:before {
+    background-image: url("../src/napo.png");
+  }
+  
+  .menu input[type="checkbox"][value="napohuevo"] + label:before {
+    background-image: url("../src/napuhuevo.png");
+  }
+  
+  .menu input[type="checkbox"][value="napojamon"] + label:before {
+    background-image: url("../src/napojamon.png");
+  }
+  
+  .menu input[type="checkbox"][value="napocompleta"] + label:before {
+    background-image: url("../src/jamonhuevo.png");
+  }
+  
+  .menu input[type="checkbox"][value="primavera"] + label:before {
+    background-image: url("../src/primavera.png");
+  }
+  
+  .menu input[type="checkbox"][value="mediterranea"] + label:before {
+    background-image: url("../src/mediterranea.png");
+  }
+  
+  .menu input[type="checkbox"][value="fugazza"] + label:before {
+    background-image: url("../src/fugazza.png");
+  }
+  
+  .menu input[type="checkbox"][value="fugazzetta"] + label:before {
+    background-image: url("../src/fugazzetta.png");
+  }
+  
+  .menu input[type="checkbox"][value="fugazzettajamon"] + label:before {
+    background-image: url("../src/fugazzettajamon.png");
+  }
+  
+  .menu input[type="checkbox"][value="fugazzettacompleta"] + label:before {
+    background-image: url("../src/fugazzettacompleta.png");
+  }
+  
+  .menu input[type="checkbox"][value="fugazzettarellena"] + label:before {
+    background-image: url("../src/fugazzettarellena.png");
+  }
+  
+  .menu input[type="checkbox"][value="calabresa"] + label:before {
+    background-image: url("../src/calabresa.png");
+  }
+  
+  .menu input[type="checkbox"][value="provolone"] + label:before {
+    background-image: url("../src/provolone.png");
+  }
+  
+  .menu input[type="checkbox"][value="provolonejamon"] + label:before {
+    background-image: url("../src/provolonejamon.png");
+  }
+  
+  .menu input[type="checkbox"][value="roquefort"] + label:before {
+    background-image: url("../src/roquefort.png");
+  }
+  
+  .menu input[type="checkbox"][value="roquefortjamon"] + label:before {
+    background-image: url("../src/roquefortjamon.png");
+  }
+  
+  .menu input[type="checkbox"][value="roqueforthuevo"] + label:before {
+    background-image: url("../src/roqueforthuevo.png");
+  }
+  
+  .menu input[type="checkbox"][value="palmitos"] + label:before {
+    background-image: url("../src/palmitos.png");
+  }
+  
+  .menu input[type="checkbox"][value="superpalmitos"] + label:before {
+    background-image: url("../src/superpalmitos.png");
+  }
+  
+  .menu input[type="checkbox"][value="supercity"] + label:before {
+    background-image: url("../src/supercity.png");
+  }
+  
+  .menu input[type="checkbox"][value="cuatroquesos"] + label:before {
+    background-image: url("../src/cuatroquesos.png");
+  }
+  
+  .menu input[type="checkbox"][value="cuatroest"] + label:before {
+    background-image: url("../src/cuatroestaciones.png");
+  }
+  
+  .menu input[type="checkbox"][value="colesterol"] + label:before {
+    background-image: url("../src/colesterol.png");
+  } 
+  
+  .menu input[type="checkbox"][value="faina"] + label:before {
+    background-image: url("../src/faina.png");
+  }
+  
+  .menu input[type="checkbox"][value="unaemp"] + label:before {
+    background-image: url("../src/unaemp.png");
+  }
+  
+  .menu input[type="checkbox"][value="dosemp"] + label:before {
+    background-image: url("../src/dosemp.png");
+  }
+  
+  .menu input[type="checkbox"][value="tresemp"] + label:before {
+    background-image: url("../src/tresemp.png");
+  }
+  
+  .menu input[type="checkbox"][value="cuatroemp"] + label:before {
+    background-image: url("../src/cuatroemp.png");
+  }
+  
+  .menu input[type="checkbox"][value="mediadocemp"] + label:before {
+    background-image: url("../src/mediadocemp.png");
+  }
+  
+  .menu input[type="checkbox"][value="docemp"] + label:before {
+    background-image: url("../src/docemp.png");
+  }
+  
+  .menu input[type="checkbox"][value="docymediaemp"] + label:before {
+    background-image: url("../src/docymediaemp.png");
+  }
+  
+  .menu input[type="checkbox"][value="dosdocemp"] + label:before {
+    background-image: url("../src/dosdocemp.png");
+  }
+  
+  
+  .menu input[type="checkbox"]:checked + label:before {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.2);
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  }  
+  
+  /* Style the delivery information form */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  form input[type="text"] {
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 1.2rem;
+  }
+  
+  /* Style the order list and buttons */
+  #order {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+  
+  #order li {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  #add,
+  #remove,
+  #submit {
+    font-size: 1.2rem;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #add:hover,
+  #remove:hover,
+  #submit:hover {
+    background-color: #3e8e41;
+  }
+  
+  #add:active,
+  #remove:active,
+  #submit:active {
+    background-color: #1f4b20;
+  }
+  
+  /* Style the total and final message */
+  #total {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  #message {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+  
