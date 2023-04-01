@@ -1,246 +1,503 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pizza City - Pedidos</title>
+    <link rel="icon" href="src/pizza.png" type="image/icon type" />
+    <link rel="stylesheet" href="css/pedidos.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Pizza City - Pedidos</title>
-  <link rel="icon" href="src/pizza.png" type="image/icon type" />
-  <link rel="stylesheet" href="css/pedidos.css" />
-</head>
+  <body>
+    <h1>Sistema de pedidos Pizza City</h1>
 
-<body>
-  <h1>Sistema de pedidos Pizza City</h1>
-
-  <div id="container">
-    <!-- Display the pizza menu -->
-    <div id="container-menu">
-      <h2>Delivery Information:</h2>
-      <form>
-        <label>Name:</label>
-        <input type="text" name="name" /><br />
-        <label>Address:</label>
-        <input type="text" name="address" />
-      </form>
-      <h2>Pizzas:</h2>
-      <ul class="menu">
-        <li>
-          <input type="checkbox" id="muzza" name="pizza" value="muzza" />
-          <label for="muzza"> $1500 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="muzzahuevo" name="pizza" value="muzzahuevo" />
-          <label for="muzzahuevo"> $1900 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="muzzaanchoa" name="pizza" value="muzzaanchoa" />
-          <label for="muzzaanchoa"> $1900 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="muzzamorrones" name="pizza" value="muzzamorrones" />
-          <label for="muzzamorrones"> $1900 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="mixta" name="pizza" value="mixta" />
-          <label for="mixta"> $1800 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="anchoas" name="pizza" value="anchoas" />
-          <label for="anchoas"> $1800 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="jamon" name="pizza" value="jamon" />
-          <label for="jamon"> $1900 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="jamonmorrones" name="pizza" value="jamonmorrones" />
-          <label for="jamonmorrones"> $2000 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="jamonpalmitos" name="pizza" value="jamonpalmitos" />
-          <label for="jamonpalmitos"> $2400 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="jamonanana" name="pizza" value="jamonanana" />
-          <label for="jamonanana"> $2400 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="jamonhuevo" name="pizza" value="jamonhuevo" />
-          <label for="jamonhuevo"> $2400 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="napo" name="pizza" value="napo" />
-          <label for="napo"> $1900 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="napohuevo" name="pizza" value="napohuevo" />
-          <label for="napohuevo"> $2300 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="napojamon" name="pizza" value="napojamon" />
-          <label for="napojamon"> $2300 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="napocompleta" name="pizza" value="napocompleta" />
-          <label for="napocompleta"> $2400 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="primavera" name="pizza" value="primavera" />
-          <label for="primavera"> $2400 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="mediterranea" name="pizza" value="mediterranea" />
-          <label for="mediterranea"> $2100 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="fugazza" name="pizza" value="fugazza" />
-          <label for="fugazza"> $1500 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="fugazzetta" name="pizza" value="fugazzetta" />
-          <label for="fugazzetta"> $1900 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="fugazzettajamon" name="pizza" value="fugazzettajamon" />
-          <label for="fugazzettajamon"> $2300 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="fugazzettacompleta" name="pizza" value="fugazzettacompleta" />
-          <label for="fugazzettacompleta"> $2500 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="fugazzettarellena" name="pizza" value="fugazzettarellena" />
-          <label for="fugazzettarellena"> $2600 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="calabresa" name="pizza" value="calabresa" />
-          <label for="calabresa"> $2000 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="provolone" name="pizza" value="provolone" />
-          <label for="provolone"> $2100 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="provolonejamon" name="pizza" value="provolonejamon"" />
+    <div id="container">
+      <!-- Display the pizza menu -->
+      <div id="container-menu">
+        <form>
+          <label>Nombre:</label>
+          <input type="text" name="name" /><br />
+          <label>Direccion:</label>
+          <input type="text" name="address" />
+        </form>
+        <h2>Menu:</h2>
+        <ul class="menu">
+          <li>
+            <input type="checkbox" id="muzza" name="pizza" value="muzza" />
+            <label for="muzza"> $1500 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="muzzahuevo"
+              name="pizza"
+              value="muzzahuevo"
+            />
+            <label for="muzzahuevo"> $1900 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="muzzaanchoa"
+              name="pizza"
+              value="muzzaanchoa"
+            />
+            <label for="muzzaanchoa"> $1900 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="muzzamorrones"
+              name="pizza"
+              value="muzzamorrones"
+            />
+            <label for="muzzamorrones"> $1900 </label>
+          </li>
+          <li>
+            <input type="checkbox" id="mixta" name="pizza" value="mixta" />
+            <label for="mixta"> $1800 </label>
+          </li>
+          <li>
+            <input type="checkbox" id="anchoas" name="pizza" value="anchoas" />
+            <label for="anchoas"> $1800 </label>
+          </li>
+          <li>
+            <input type="checkbox" id="jamon" name="pizza" value="jamon" />
+            <label for="jamon"> $1900 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="jamonmorrones"
+              name="pizza"
+              value="jamonmorrones"
+            />
+            <label for="jamonmorrones"> $2000 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="jamonpalmitos"
+              name="pizza"
+              value="jamonpalmitos"
+            />
+            <label for="jamonpalmitos"> $2400 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="jamonanana"
+              name="pizza"
+              value="jamonanana"
+            />
+            <label for="jamonanana"> $2400 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="jamonhuevo"
+              name="pizza"
+              value="jamonhuevo"
+            />
+            <label for="jamonhuevo"> $2400 </label>
+          </li>
+          <li>
+            <input type="checkbox" id="napo" name="pizza" value="napo" />
+            <label for="napo"> $1900 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="napohuevo"
+              name="pizza"
+              value="napohuevo"
+            />
+            <label for="napohuevo"> $2300 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="napojamon"
+              name="pizza"
+              value="napojamon"
+            />
+            <label for="napojamon"> $2300 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="napocompleta"
+              name="pizza"
+              value="napocompleta"
+            />
+            <label for="napocompleta"> $2400 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="primavera"
+              name="pizza"
+              value="primavera"
+            />
+            <label for="primavera"> $2400 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="mediterranea"
+              name="pizza"
+              value="mediterranea"
+            />
+            <label for="mediterranea"> $2100 </label>
+          </li>
+          <li>
+            <input type="checkbox" id="fugazza" name="pizza" value="fugazza" />
+            <label for="fugazza"> $1500 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="fugazzetta"
+              name="pizza"
+              value="fugazzetta"
+            />
+            <label for="fugazzetta"> $1900 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="fugazzettajamon"
+              name="pizza"
+              value="fugazzettajamon"
+            />
+            <label for="fugazzettajamon"> $2300 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="fugazzettacompleta"
+              name="pizza"
+              value="fugazzettacompleta"
+            />
+            <label for="fugazzettacompleta"> $2500 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="fugazzettarellena"
+              name="pizza"
+              value="fugazzettarellena"
+            />
+            <label for="fugazzettarellena"> $2600 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="calabresa"
+              name="pizza"
+              value="calabresa"
+            />
+            <label for="calabresa"> $2000 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="provolone"
+              name="pizza"
+              value="provolone"
+            />
+            <label for="provolone"> $2100 </label>
+          </li>
+          <li>
+            <input type="checkbox" id="provolonejamon" name="pizza"
+            value="provolonejamon"" />
             <label for="provolonejamon"> $2300 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="roquefort" name="pizza" value="roquefort" />
-          <label for="roquefort"> $2100 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="roquefortjamon" name="pizza" value="roquefortjamon" />
-          <label for="roquefortjamon"> $2300 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="roqueforthuevo" name="pizza" value="roqueforthuevo" />
-          <label for="roqueforthuevo"> $2300 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="palmitos" name="pizza" value="palmitos" />
-          <label for="palmitos"> $2100 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="superpalmitos" name="pizza" value="superpalmitos" />
-          <label for="superpalmitos"> $2600 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="supercity" name="pizza" value="supercity" />
-          <label for="supercity"> $2600 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="cuatroquesos" name="pizza" value="cuatroquesos" />
-          <label for="cuatroquesos"> $2300 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="cuatroest" name="pizza" value="cuatroest" />
-          <label for="cuatroest"> $2100 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="colesterol" name="pizza" value="colesterol" />
-          <label for="colesterol"> $2400 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="faina" name="pizza" value="faina" />
-          <label for="faina"> $200 </label>
-        </li>
-      </ul>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="roquefort"
+              name="pizza"
+              value="roquefort"
+            />
+            <label for="roquefort"> $2100 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="roquefortjamon"
+              name="pizza"
+              value="roquefortjamon"
+            />
+            <label for="roquefortjamon"> $2300 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="roqueforthuevo"
+              name="pizza"
+              value="roqueforthuevo"
+            />
+            <label for="roqueforthuevo"> $2300 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="palmitos"
+              name="pizza"
+              value="palmitos"
+            />
+            <label for="palmitos"> $2100 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="superpalmitos"
+              name="pizza"
+              value="superpalmitos"
+            />
+            <label for="superpalmitos"> $2600 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="supercity"
+              name="pizza"
+              value="supercity"
+            />
+            <label for="supercity"> $2600 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="cuatroquesos"
+              name="pizza"
+              value="cuatroquesos"
+            />
+            <label for="cuatroquesos"> $2300 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="cuatroest"
+              name="pizza"
+              value="cuatroest"
+            />
+            <label for="cuatroest"> $2100 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="colesterol"
+              name="pizza"
+              value="colesterol"
+            />
+            <label for="colesterol"> $2400 </label>
+          </li>
+          <li>
+            <input type="checkbox" id="faina" name="pizza" value="faina" />
+            <label for="faina"> $200 </label>
+          </li>
 
-      <!-- EMPANADAS -->
+          <!-- COMPLETADO -->
 
-      <h2>Empanadas:</h2>
-      <ul class="menu">
-        <li>
-          <input type="checkbox" id="faina" name="pizza" value="unaemp" />
-          <label for="unaemp"> $200 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="dosemp" name="pizza" value="dosemp" />
-          <label for="dosemp"> $400 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="tresemp" name="pizza" value="tresemp" />
-          <label for="tresemp"> $600 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="cuatroemp" name="pizza" value="cuatroemp" />
-          <label for="cuatroemp"> $800 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="mediadocemp" name="pizza" value="mediadocemp" />
-          <label for="mediadocemp"> $1200 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="docemp" name="pizza" value="docemp" />
-          <label for="docemp"> $2200 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="docymediaemp" name="pizza" value="docymediaemp" />
-          <label for="docymediaemp"> $3400 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="dosdocemp" name="pizza" value="dosdocemp" />
-          <label for="dosdocemp"> $4400 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="muzzaanchoa" name="pizza" value="muzzaanchoa" />
-          <label for="muzzaanchoa"> $1900 </label>
-        </li>
-      </ul>
+          <li>
+            <input type="checkbox" id="" name="" value="" />
+            <label for=""></label>
+          </li>
+          <li>
+            <input type="checkbox" id="" name="" value="" />
+            <label for=""></label>
+          </li>
+          <li>
+            <input type="checkbox" id="" name="" value="" />
+            <label for=""></label>
+          </li>
+          <li>
+            <input type="checkbox" id="" name="" value="" />
+            <label for=""></label>
+          </li>
+          <li>
+            <input type="checkbox" id="" name="" value="" />
+            <label for=""></label>
+          </li>
+          <li>
+            <input type="checkbox" id="" name="" value="" />
+            <label for=""></label>
+          </li>
+          <li>
+            <input type="checkbox" id="" name="" value="" />
+            <label for=""></label>
+          </li>
+          <li>
+            <input type="checkbox" id="" name="" value="" />
+            <label for=""></label>
+          </li>
+          <li>
+            <input type="checkbox" id="" name="" value="" />
+            <label for=""></label>
+          </li>
 
-      <!-- MINUTAS -->
+          <!-- EMPANADAS -->
 
-      <h2>Minutas:</h2>
-      <ul class="menu">
-        <li>
-          <input type="checkbox" id="muzzaanchoa" name="pizza" value="muzzaanchoa" />
-          <label for="muzzaanchoa"> $1900 </label>
-        </li>
-        <li>
-          <input type="checkbox" id="dosdocemp" name="pizza" value="dosdocemp" />
-          <label for="dosdocemp"> $4400 </label>
-        </li>
-      </ul>
+          <li>
+            <input type="checkbox" id="unaemp" name="pizza" value="unaemp" />
+            <label for="unaemp"> $200 </label>
+          </li>
+          <li>
+            <input type="checkbox" id="dosemp" name="pizza" value="dosemp" />
+            <label for="dosemp"> $400 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="cuatroemp"
+              name="pizza"
+              value="cuatroemp"
+            />
+            <label for="cuatroemp"> $800 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="mediadocemp"
+              name="pizza"
+              value="mediadocemp"
+            />
+            <label for="mediadocemp"> $1200 </label>
+          </li>
+          <li>
+            <input type="checkbox" id="docemp" name="pizza" value="docemp" />
+            <label for="docemp"> $2200 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="docymediaemp"
+              name="pizza"
+              value="docymediaemp"
+            />
+            <label for="docymediaemp"> $3400 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="dosdocemp"
+              name="pizza"
+              value="dosdocemp"
+            />
+            <label for="dosdocemp"> $4400 </label>
+          </li>
+
+          <!-- COMPLETADO -->
+
+          <li>
+            <input type="checkbox" id="" name="" value="" />
+            <label for=""></label>
+          </li>
+          <li>
+            <input type="checkbox" id="" name="" value="" />
+            <label for=""></label>
+          </li>
+          <li>
+            <input type="checkbox" id="" name="" value="" />
+            <label for=""></label>
+          </li>
+          <li>
+            <input type="checkbox" id="" name="" value="" />
+            <label for=""></label>
+          </li>
+          <!-- MINUTAS -->
+          <li>
+            <input
+              type="checkbox"
+              id="mila"
+              name="pizza"
+              value="mila"
+            />
+            <label for="mila"> $1600 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="milanapo"
+              name="pizza"
+              value="milanapo"
+            />
+            <label for="milanapo"> $2300 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="milafuga"
+              name="pizza"
+              value="milafuga"
+            />
+            <label for="milafuga"> $2400 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="milajamonmorron"
+              name="pizza"
+              value="milajamonmorron"
+            />
+            <label for="milajamonmorron"> $2500 </label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              id="sandwichmila"
+              name="pizza"
+              value="sandwichmila"
+            />
+            <label for="sandwichmila"> $1300 </label>
+          </li>
+          <li>
+            <input type="checkbox" id="" name="" value="" />
+            <label for=""></label>
+          </li>
+          <li>
+            <input type="checkbox" id="" name="" value="" />
+            <label for=""></label>
+          </li>
+          <li>
+            <input type="checkbox" id="" name="" value="" />
+            <label for=""></label>
+          </li>
+          <li>
+            <input type="checkbox" id="" name="" value="" />
+            <label for=""></label>
+          </li>
+          <li>
+            <input type="checkbox" id="" name="" value="" />
+            <label for=""></label>
+          </li>
+          <li>
+            <input type="checkbox" id="" name="" value="" />
+            <label for=""></label>
+          </li>
+        </ul>
+      </div>
+      <div id="container-order">
+        <!-- Allow the user to add or remove pizzas from their order -->
+        <h2>Tu orden:</h2>
+        <ul id="order">
+          <!-- The order will be displayed here -->
+        </ul>
+        <button id="remove">Reinciar Orden</button>
+        <!-- Allow the user to submit their order -->
+        <h2>Total:</h2>
+        <p id="total">$0</p>
+        <button id="submit">Terminar Orden</button>
+
+        <!-- Display the final message here -->
+        <p id="totalM"></p>
+        <p id="nombre"></p>
+        <p id="direccion"></p>
+        <a id="mapa" href=""></a>
+        <!-- JavaScript code -->
+        <script src="js/pizza.js"></script>
+      </div>
     </div>
-    <div id="container-order">
-      <!-- Allow the user to add or remove pizzas from their order -->
-      <h2>Tu orden:</h2>
-      <ul id="order">
-        <!-- The order will be displayed here -->
-      </ul>
-      <button id="remove">Reinciar Orden</button>
-      <!-- Allow the user to submit their order -->
-      <h2>Total:</h2>
-      <p id="total">$0</p>
-      <button id="submit">Terminar Orden</button>
-
-      <!-- Display the final message here -->
-      <p id="totalM"></p>
-      <p id="nombre"></p>
-      <p id="direccion"></p>
-      <!-- JavaScript code -->
-      <script src="js/pizza.js"></script>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>

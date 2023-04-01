@@ -42,7 +42,12 @@ const menu = {
   mediadocemp: 1200,
   docemp: 2200,
   docymediaemp: 3400,
-  dosdocemp: 4400
+  dosdocemp: 4400,
+  mila: 1600,
+  milanapo: 2300,
+  milafuga: 2400,
+  milajamonmorron: 2500,
+  sandwichmila: 1300,
 };
 
 // Keep track of the order
@@ -162,6 +167,11 @@ function submitOrder() {
   const direccionMessage = `Direccion: ${address}`;
   var messageElem = document.getElementById("direccion");
   messageElem.textContent = direccionMessage;
+  const mapUrl = `https://pizzacity.com.ar/mapa?direccion=${encodeURI(address)}`;
+  var messageEleme = document.getElementById("mapa");
+  messageEleme.href = mapUrl;
+  messageEleme.target = "_blank";
+  messageEleme.textContent = "Ver mapa";
 
   // Reset the order
   order = {};

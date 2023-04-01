@@ -241,6 +241,26 @@ body {
     background-image: url("../src/dosdocemp.png");
   }
   
+  .menu input[type="checkbox"][value="mila"] + label:before {
+    background-image: url("../src/mila.png");
+  }
+  
+  .menu input[type="checkbox"][value="milanapo"] + label:before {
+    background-image: url("../src/milanapo.png");
+  }
+  
+  .menu input[type="checkbox"][value="milafuga"] + label:before {
+    background-image: url("../src/milafuga.png");
+  }
+  
+  .menu input[type="checkbox"][value="milajamonmorron"] + label:before {
+    background-image: url("../src/milajamonmorron.png");
+  }
+  
+  .menu input[type="checkbox"][value="sandwichmila"] + label:before {
+    background-image: url("../src/sandwichmila.png");
+  }
+  
   
   .menu input[type="checkbox"]:checked + label:before {
     background-color: rgba(255, 255, 255, 0.2);

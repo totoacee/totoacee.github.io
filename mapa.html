@@ -74,6 +74,18 @@
       }
     </style>
     <script src="js/app.js"></script>
+    <script>
+      // Obtener los parámetros de la URL
+      const params = new URLSearchParams(location.search);
+      const direccion = params.get("direccion");
+    
+      // Si hay una dirección en los parámetros, buscarla automáticamente
+      if (direccion) {
+        document.getElementById("direccion").value = direccion;
+        obtenerCoordenadas(direccion);
+      }
+    </script>
+    
   </head>
   <body>
     <form>

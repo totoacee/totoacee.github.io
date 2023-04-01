@@ -33,6 +33,16 @@ document.addEventListener('DOMContentLoaded', function() {
     var direccionUsuario = document.getElementById('direccion').value;
     obtenerCoordenadas(direccionUsuario);
   });
+  // Obtener los parámetros de la URL
+  const params = new URLSearchParams(location.search);
+  const direccion = params.get("direccion");
+
+  // Si hay una dirección en los parámetros, buscarla automáticamente
+  if (direccion) {
+    document.getElementById("direccion").value = direccion;
+    direccionUsuario = direccion
+    obtenerCoordenadas(direccionUsuario);
+  }
 });
 
 // utiliza el servicio Nominatim de OpenStreetMap para obtener las coordenadas de una dirección
